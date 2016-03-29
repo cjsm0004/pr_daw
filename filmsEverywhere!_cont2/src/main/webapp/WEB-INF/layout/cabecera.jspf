@@ -1,0 +1,31 @@
+<%@taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>${titulo}</title>
+        <meta name="viewport" content="width=device-width, initial-escale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<c:url value='/css/login.css'/>">
+        <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
+        <%--link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'--%>
+        <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script></script>
+
+
+
+
+
+
+
+    </head>
+    <body class="container">
+        <header class="jumbotron cabecera row">
+            <div class="col-md-2">
+                <a href="Inicio.jsp"><img src="${imgUrl}/logo.png" alt="logo"></a>  
+            </div>
+            <div class="col-md-10">
+                <h1>Films Everywhere!</h1>    
+            </div>
+        </header>
