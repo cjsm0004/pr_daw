@@ -1,0 +1,8 @@
+com\daw\clases\AdminControlador.class
+com\daw\films\dao\PeliculaDAOList.class
+com\daw\clases\UserControlador.class
+com\daw\films\dao\PeliculaDAO.class
+com\daw\films\dao\PeliculaDAOJDBC.class
+com\daw\films\dao\GenericDAO.class
+com\daw\films\model\Pelicula.class
+com\daw\util\Util.class
