@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context path="/pr3_jsp" antiJARLocking="true">
+    
+<Resource auth="Container" driverClassName="org.apache.derby.jdbc.ClientDriver"
+url="jdbc:derby://localhost:1527/BBDDPeliculas"
+type="javax.sql.DataSource"
+name="jdbc/peliculas" 
+username="carlos"
+password="carlos"
+maxActive="25"
+
+/>
+
+
+<Realm className="org.apache.catalina.realm.DataSourceRealm" 
+        dataSourceName="jdbc/peliculas" localDataSource="true" 
+        roleNameCol="rol" 
+        userCredCol="clave" 
+        userNameCol="usuario" 
+        userRoleTable="roles" 
+        userTable="usuarios"/>
+
+</Context>

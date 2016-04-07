@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <div>
+                <div class="col-md-10">
+                    <ul class="nav navbar-nav">
+
+                        <li ><a href="Inicio.jsp"><spam class="glyphicon glyphicon-home">Inicio</a></li>
+                        <li ><a href="${srvUrl}/Peliculas">Peliculas</a></li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <div class="col-md-2 btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>
+                        Perfil <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="EditarPerfil.jsp">Editar perfil</a></li>
+                        <li><a href="${srvUrl}/addPelicula">Añadir Película</a></li>
+                        <li><a href="${srvUrl}/addUsuario">Añadir usuario</a></li>
+                        <li><a href="#">Eliminar usuario</a></li>
+                        <li><a href="#"></a>Cerrar Sesión</li>
+                    </ul>
+
+
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+</nav>
