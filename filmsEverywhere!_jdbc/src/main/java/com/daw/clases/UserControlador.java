@@ -6,6 +6,7 @@
 package com.daw.clases;
 
 import com.daw.films.dao.PeliculaDAO;
+import com.daw.films.dao.PeliculaDAOJDBC;
 import com.daw.films.dao.PeliculaDAOList;
 import com.daw.films.model.Pelicula;
 import com.daw.util.Util;
@@ -43,7 +44,7 @@ public class UserControlador extends HttpServlet {
         super.init(servletConfig); //To change body of generated methods, choose Tools | Templates.
 
         //Initialize Model Data
-        peliculaDAO = new PeliculaDAOList();
+        peliculaDAO = new PeliculaDAOJDBC();
         srvUrl = servletConfig.getServletContext().getContextPath() + "/UserControlador";
         imgUrl = servletConfig.getServletContext().getContextPath() + "/imagenes";
 

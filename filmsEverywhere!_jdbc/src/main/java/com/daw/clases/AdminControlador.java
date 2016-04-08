@@ -114,15 +114,24 @@ public class AdminControlador extends HttpServlet {
                 rd.forward(request, response);
                 break;
             }
-            case "/borra": {
+            /*case "/borra": {
                 int id = Integer.parseInt(Util.getParam(request.getParameter("id"), "0"));
                 int iden = id;
                 if (id > 0) {
                     peliculaDAO.borra(id);
                 }
-                response.sendRedirect(srvUrl);
+                response.sendRedirect(srvUrl+"/Peliculas");
+                return;
+            }*/              /*HE DEJADO ESTA FUNCION COMENTADA PORQUE ES IGUAL QUE LA DE ABAJO Y NO FUNCIONA*/
+            
+            case "/borra": {
+                int id = Integer.parseInt(Util.getParam(request.getParameter("id"), "0"));
+                int iden=id;
+                if (id > 0) peliculaDAO.borra(id);
+                response.sendRedirect(srvUrl+"/Peliculas");
                 return;
             }
+            
             case "/addPelicula": {
                 Pelicula p = new Pelicula();
                 request.setAttribute("pelicula", p);
@@ -155,36 +164,38 @@ public class AdminControlador extends HttpServlet {
         //Log.log(Level.INFO, "Peticion POST al administrador {0}", action);
         switch (action) {
 
-            case "/addPelicula": {
+            /*case "/addPelicula": {
                 Pelicula p = new Pelicula();
                 if (validarPelicula(request, p)) {
                     peliculaDAO.crea(p);
-                    response.sendRedirect(srvUrl + "/Ficha?id=" + p.getId());
+                    response.sendRedirect(srvUrl+"/Peliculas");
                 } else {
                     request.setAttribute("pelicula", p);
                     rd = request.getRequestDispatcher(srvViewPath + "/addPelicula.jsp");
                     rd.forward(request, response);
                 }
                 break;
-            }
-
-            case "/busca": {
-                Pelicula p = new Pelicula();
-                String busca = Util.getParam(request.getParameter("buscar"), "");
-                if (busca != "") {
-                    p = peliculaDAO.buscaTitulo(busca);
+            }*/           /*HE DEJADO ESTA FUNCION COMENTADA PORQUE ES IGUAL QUE LA DE ABAJO Y NO FUNCIONA */
+            
+            case "/addPelicula":{
+                Pelicula p=new Pelicula();
+                if (validarPelicula (request,p)){
+                    peliculaDAO.crea(p);
+                    response.sendRedirect(srvUrl+"/Peliculas");
+                }else{
                     request.setAttribute("pelicula", p);
-                    rd = request.getRequestDispatcher(srvViewPath + "Peliculas.jsp");
+                    rd=request.getRequestDispatcher(srvViewPath+"/addPelicula.jsp");
                     rd.forward(request, response);
                 }
-                break;
+                break;    
             }
+            
 
             case "/editarPelicula": {
                 Pelicula p = new Pelicula();
                 if (validarPelicula(request, p)) {
                     peliculaDAO.guarda(p);
-                    response.sendRedirect(srvUrl);
+                    response.sendRedirect(srvUrl+"/Peliculas");
                 } else {
                     request.setAttribute("pelicula", p);
                     rd = request.getRequestDispatcher(srvViewPath + "/editarPelicula.jsp");

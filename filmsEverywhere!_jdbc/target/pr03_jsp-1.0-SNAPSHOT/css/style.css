@@ -67,6 +67,7 @@ label{
 
 }
 .añadirP{
+    
     margin: 30px auto;
     width: 400px;
     height: 500px;
@@ -76,4 +77,9 @@ label{
 }
 .finaliza_compra{
     margin: 10px;
+}
+
+.portada{
+    margin-bottom: 10px;
+    
 }

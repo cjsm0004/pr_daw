@@ -9,7 +9,7 @@
             <label>Contraseña: </label>
             <input type="password" name="j_password" id="password" class="form-control"/><br/>
             <div class="col-md-2"></div>
-            <input type="submit" value="Enviar"/>
+            <input type="submit" value="Iniciar sesión" class="btn btn-primary boton botonE" />
             
             <!--<a href="UserControlador" class="btn btn-primary boton botonE" role="button">Iniciar Sesión como user</a>
             <a href="AdminControlador" class="btn btn-primary boton botonE" role="button">Iniciar Sesión como admin</a>
