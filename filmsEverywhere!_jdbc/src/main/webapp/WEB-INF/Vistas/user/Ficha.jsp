@@ -18,6 +18,7 @@
             </div>
         </div>
         <div class="col-md-6 sinopsis">
+            <h3><strong>Sinopsis</strong></h3>
             <p>${pelicula.sinopsis}</p>
             <a href="#" class="btn btn-success" role="button">Comprar</a>
         </div>

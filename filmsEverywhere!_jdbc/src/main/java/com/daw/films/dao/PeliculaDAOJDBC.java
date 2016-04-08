@@ -30,7 +30,7 @@ public class PeliculaDAOJDBC implements PeliculaDAO {
     private static final String SQL_BUSCATODOS = "SELECT * FROM PELICULAS";
     private static final String SQL_BUSCATITULO = "SELECT * FROM PELICULAS WHERE TITULO = ?";
     private static final String SQL_CREA = "INSERT INTO Peliculas (titulo,sinopsis,imagen) VALUES (?,?,'defecto.jpg')";
-    private static final String SQL_ACTUALIZA = "UPDATE Peliculas set TITULO=?, SINOPSIS=?, IMAGEN='origen.jpg' WHERE id=?";
+    private static final String SQL_ACTUALIZA = "UPDATE Peliculas set TITULO=?, SINOPSIS=?, IMAGEN='defecto.jpg' WHERE id=?";
     private static final String SQL_BORRA = "DELETE FROM Peliculas WHERE id=?";
 
     private DataSource ds = null;
